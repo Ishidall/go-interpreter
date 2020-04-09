@@ -4,6 +4,7 @@ import (
 	"github.com/Ishidall/go-interpreter/token"
 )
 
+// Lexer implements Lexical Analyzer.
 type Lexer struct {
 	input        string
 	position     int  // current reading position
@@ -20,6 +21,7 @@ func New(input string) *Lexer {
 	return l
 }
 
+// NextToken analizes current character, return Token, and moves on to next character.
 func (l *Lexer) NextToken() token.Token {
 	var tok token.Token
 
